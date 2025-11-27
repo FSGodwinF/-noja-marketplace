@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div className='d-flex justify-content-around align-items-center mt-2 position-sticky top-0 shadow-sm bg-white z-3'>
         <div>
-          <h1 className='fw-semibold'>Noja</h1>
+          <h1 className='fw-bold'>Noja</h1>
           <p className='fw-light'>Break bulk. Save more.</p>
         </div>
         <div>

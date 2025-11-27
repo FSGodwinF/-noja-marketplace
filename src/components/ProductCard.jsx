@@ -1,7 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
-const ProductCard = ({img, name, size, price, status, participants, timeLeft, variant = 'open',}) => {
+const ProductCard = ({id, img, name, size, price, status, participants, timeLeft, variant = 'open',}) => {
   return (
     <div className='card position-relative h-100 rounded-4 shadow-sm'>
         <div className='p-3'>
@@ -32,9 +33,9 @@ const ProductCard = ({img, name, size, price, status, participants, timeLeft, va
         {
             variant === 'open' ?(
             <div className='d-flex flex-column gap-3 m-3'>
-                <button className='btn btn-success'>
-                View Details
-                </button>
+                <Link  to={`/product/${id}`} className='btn btn-success'>
+                        View Details
+                </Link>
                 <button className='btn btn-outline-success'>
                 Create New Pool
                 </button>

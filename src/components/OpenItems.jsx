@@ -1,4 +1,3 @@
-import React from 'react'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import ProductCard from './ProductCard';
 import rice from '../assets/images/rice.jpg';
