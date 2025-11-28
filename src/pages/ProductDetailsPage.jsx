@@ -19,42 +19,48 @@ const ProductDetailsPage = () => {
                 <span className="ms-2 fw-semibold" style={{fontSize:"1rem"}}>Back to Products</span>
             </Link>
         </div>
-        <div className="mt-5 position-relative">
-            <div className='p-3'>
-                <img className="img-fluid rounded-4"src={product.img} alt={product.name} style={{height:"350px", objectFit:"cover", width:"100%", borderRadius:"0.75rem"}}/>
-                <span className='rounded fw-semibold px-2 py-1 position-absolute top-0 end-0 m-4 text-center' style={{width:"4rem", background:"lightgray", fontSize:"0.8rem"}}>
-                    {product.status}
-                </span>
+        <div className="row mt-5 align-items-start">
+            <div className="col-12 col-lg-6 position-relative">
+                {/* Product Image Section */}
+                <div className='p-3'>
+                    <img className="img-fluid rounded-4"src={product.img} alt={product.name} style={{height:"350px", objectFit:"cover", width:"100%", borderRadius:"0.75rem"}}/>
+                    <span className='rounded fw-semibold px-2 py-1 position-absolute top-0 end-0 m-5 text-center' style={{width:"4rem", background:"lightgray", fontSize:"0.8rem"}}>
+                        {product.status}
+                    </span>
+                </div>
             </div>
-        </div>
-        <div className="d-flex flex-column gap-2 m-3">
-            <h2 className="text-success">{product.name}</h2>
-            <span className='' style={{fontSize:"1rem", color:"gray"}}>{product.size}</span>
-            <span className='fw-bold fs-1 text-success'>₦{product.price}</span>
-        </div>
-        <div className="p-3 shadow-lg rounded-4">
-            <p className="" style={{fontSize:"0.8rem", color:"gray"}}>No active poll for this item yet</p>
-            <div style={{fontSize:"0.7rem", color:"gray"}} className="d-flex gap-2">
-                <p>Minimum 5 people needed.</p>
-                <span>Maximum 20 participants</span>
-            </div>
-        </div>
-        <div className="mt-3 d-flex flex-column gap-3">
-            <button className=" btn btn-success p-3 fs-5">Create New Pool</button>
-            <button className=" btn btn-outline-success p-3 fs-5">Add to Basket</button>
-        </div>
-        <div className="d-flex justify-content-around align-items-center mt-4 p-2">
-            <div style={{fontSize:"0.8rem"}} className=" d-flex gap-2 align-items-center">
-                <GppGoodOutlinedIcon/>
-                <span>Quality Assured</span>
-            </div>
-            <div style={{fontSize:"0.8rem"}} className=" d-flex gap-2 align-items-center">
-                <LocalShippingTwoToneIcon/>
-                <span>Reliable Delivery</span>
-            </div>
-            <div style={{fontSize:"0.8rem"}} className=" d-flex gap-2 align-items-center">
-                <StarBorderTwoToneIcon/>
-                <span>Trusted Sellers</span>
+            {/* Product Info Section */}
+            <div className="col-12 col-lg-6">
+                <div className="d-flex flex-column gap-2 m-3">
+                    <h2 className="text-success">{product.name}</h2>
+                    <span className='' style={{fontSize:"1rem", color:"gray"}}>{product.size}</span>
+                    <span className='fw-bold fs-1 text-success'>₦{product.price}</span>
+                </div>
+                <div className="p-3 shadow-lg rounded-4">
+                    <p className="" style={{fontSize:"0.8rem", color:"gray"}}>No active poll for this item yet</p>
+                    <div style={{fontSize:"0.7rem", color:"gray"}} className="d-flex gap-2">
+                        <p>Minimum 5 people needed.</p>
+                        <span>Maximum 20 participants</span>
+                    </div>
+                </div>
+                <div className="mt-3 d-flex flex-column gap-3">
+                    <button className=" btn btn-success p-3 fs-5">Create New Pool</button>
+                    <button className=" btn btn-outline-success p-3 fs-5">Add to Basket</button>
+                </div>
+                <div className="d-flex justify-content-around align-items-center mt-4 p-2">
+                    <div style={{fontSize:"0.8rem"}} className=" d-flex gap-2 align-items-center">
+                        <GppGoodOutlinedIcon/>
+                        <span>Quality Assured</span>
+                    </div>
+                    <div style={{fontSize:"0.8rem"}} className=" d-flex gap-2 align-items-center">
+                        <LocalShippingTwoToneIcon/>
+                        <span>Reliable Delivery</span>
+                    </div>
+                    <div style={{fontSize:"0.8rem"}} className=" d-flex gap-2 align-items-center">
+                        <StarBorderTwoToneIcon/>
+                        <span>Trusted Sellers</span>
+                    </div>
+                </div>
             </div>
         </div>
         <div className="mt-5">
