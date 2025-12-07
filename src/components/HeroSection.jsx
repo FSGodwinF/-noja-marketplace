@@ -1,11 +1,13 @@
-import React from 'react'
+import { useAuth } from '../context/AuthContext';
 import hero from '../assets/Hero/hero.png';
 
 
 const HeroSection = () => {
+  const {openAuthModal} = useAuth();
+  
   return (
     <div className='position-relative d-flex align-items-center justify-content-center text-center' 
-    style={{maxwidth: "100vw", height:'70vh',overflow: "hidden" }}
+    style={{maxWidth: "100vw", height:'70vh',overflow: "hidden" }}
     >
       <img className=" img-fluid position-absolute w-100 h-100 top-0 start-0" 
       src={hero} 
@@ -21,7 +23,9 @@ const HeroSection = () => {
           <button className='btn btn-success btn-lg'>
           Start Shopping
           </button>
-          <button className='btn btn-outline-light btn-lg'>
+          <button 
+          className='btn btn-outline-light btn-lg'
+          onClick={openAuthModal}>
           Join Noja
           </button>
         </div>

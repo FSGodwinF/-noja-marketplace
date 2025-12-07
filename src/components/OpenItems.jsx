@@ -1,18 +1,8 @@
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import ProductCard from './ProductCard';
-import rice from '../assets/images/rice.jpg';
-import beans from '../assets/images/beans.jpg';
-import potatoes from '../assets/images/potatoes.jpg';
-import tomatoes from '../assets/images/tomatoes.jpg';
+import products from '../data/products';
 
 const OpenItems = () => {
-
-  const products = [
-    {id:1, img: rice, name:"Premium Rice", size: "50KG Bag", price: 50000, status: "Fresh"},
-    {id:2, img: beans, name:"Brown Beans (Oloyin)", size: "25KG Bag", price: 35800, status: "Fresh"},
-    {id:3, img: potatoes, name:"Potatoes", size: "50KG Bag", price: 45000, status: "Fresh"},
-    {id:4, img: tomatoes, name:"Tomatoes", size: "30KG Basket", price: 28500, status: "Fresh"}
-  ];
 
   return (
     <div className='m-4 d-flex flex-column'>
