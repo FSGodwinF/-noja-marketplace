@@ -25,7 +25,7 @@ const HeroSection = () => {
           </button>
           <button 
           className='btn btn-outline-light btn-lg'
-          onClick={openAuthModal}>
+          onClick={()=> openAuthModal('login')}>
           Join Noja
           </button>
         </div>

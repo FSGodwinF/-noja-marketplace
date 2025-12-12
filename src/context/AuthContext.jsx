@@ -14,12 +14,22 @@ export const useAuth = () => {
 export const AuthProvider = ({children}) => {
     // State to manage authentication modal visibility
     const [isAuthOpen, setIsAuthOpen] = useState(false);
+    // State to manage which type of modal to show
+    const [modalType, setModalType] = useState('login'); // 'login', 'buyerSignup', 'traderSignup'
 
-    const openAuthModal = () => setIsAuthOpen(true);
+    const openAuthModal = (type = 'login') => {
+        setModalType (type);
+        setIsAuthOpen(true);
+        
+    };
     const closeAuthModal = () => setIsAuthOpen(false);
     // Provide the state and functions to the context consumers
     return (
-        <AuthContext.Provider value={{isAuthOpen, openAuthModal, closeAuthModal}}>
+        <AuthContext.Provider value={{
+            isAuthOpen, 
+            modalType, 
+            openAuthModal, 
+            closeAuthModal}}>
             {children}
         </AuthContext.Provider>
     );
